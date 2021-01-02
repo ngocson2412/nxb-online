@@ -45,7 +45,7 @@
       <div class="section__header-mobile">
         <div class="container">
           <div class="header__wrap d-flex align-items-center">
-            <div class="header__logo"><a href="./index-mobie.html"><img src="./assets/images/logo-nxb-dark.png" alt=""></a></div>
+            <div class="header__logo"><a href="./index-mobile.html"><img src="./assets/images/logo-nxb-dark.png" alt=""></a></div>
             <div class="header__info d-flex align-items-center">
               <div class="header__button d-flex align-items-center account"><a href="./login-mobie.html">
                   <div class="button__notification">!</div><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.25C8.26942 1.25 6.57769 1.76318 5.13876 2.72464C3.69983 3.6861 2.57832 5.05267 1.91606 6.65152C1.25379 8.25037 1.08051 10.0097 1.41813 11.707C1.75575 13.4044 2.58911 14.9635 3.81282 16.1872C5.03653 17.4109 6.59563 18.2442 8.29296 18.5819C9.9903 18.9195 11.7496 18.7462 13.3485 18.0839C14.9473 17.4217 16.3139 16.3002 17.2754 14.8612C18.2368 13.4223 18.75 11.7306 18.75 10C18.75 7.67936 17.8281 5.45376 16.1872 3.81282C14.5462 2.17187 12.3206 1.25 10 1.25ZM15 15.5744V15.1944C15.0174 14.3421 14.6998 13.5171 14.1155 12.8964C13.5312 12.2758 12.7267 11.909 11.875 11.875H8.125C7.27398 11.9092 6.47038 12.2761 5.88712 12.8968C5.30386 13.5174 4.98755 14.3422 5.00625 15.1937C5.00625 15.2006 5 15.2075 5 15.2144V15.58C3.8662 14.5679 3.06647 13.2354 2.70667 11.7588C2.34687 10.2822 2.44398 8.73112 2.98513 7.31092C3.52628 5.89072 4.48595 4.66833 5.73714 3.80557C6.98832 2.94281 8.47201 2.48034 9.99182 2.47939C11.5116 2.47844 12.9959 2.93905 14.2482 3.80025C15.5004 4.66145 16.4616 5.88263 17.0045 7.30216C17.5475 8.72168 17.6465 10.2726 17.2886 11.7497C16.9306 13.2267 16.1325 14.5603 15 15.5737V15.5744Z" fill="#D4B26B"/><path d="M10 4.375C9.38193 4.375 8.77775 4.55828 8.26384 4.90166C7.74994 5.24504 7.3494 5.7331 7.11288 6.30411C6.87635 6.87513 6.81447 7.50347 6.93505 8.10966C7.05563 8.71585 7.35325 9.27267 7.79029 9.70971C8.22733 10.1467 8.78415 10.4444 9.39034 10.565C9.99654 10.6855 10.6249 10.6236 11.1959 10.3871C11.7669 10.1506 12.255 9.75006 12.5983 9.23616C12.9417 8.72225 13.125 8.11807 13.125 7.5C13.125 6.6712 12.7958 5.87634 12.2097 5.29029C11.6237 4.70424 10.8288 4.375 10 4.375Z" fill="#D4B26B"/></svg></a></div>
@@ -1329,39 +1329,41 @@
                 </div>
               </div>
             </div>
-      <div class="container">
-        <div class="checkout_mb-1">
-          <h1 class="headding">Thông tin người nhận</h1>
-          <div class="liner"></div>
-          <div class="section_form"> 
-            <form action="">
-              <div class="single-input"><span><img src="./assets/images/checkout-mb-1/user-plus.svg" alt="" srcset=""></span>
-                <input type="text" placeholder="Họ và tên">
+      <div class="section-checkout" id="checkout-mb">
+        <div class="container">
+          <div class="section-checkout__content confirm">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="section-checkout__left">
+                  <div class="payment">
+                    <h3 class="title confirm-code">Mã đơn hàng<span class="code">#125464754</span></h3>
+                  </div>
+                  <div class="info-user">
+                    <h3 class="title confirm-code">Thông tin người nhận<a href="checkout-desktop-2.html">Thay đổi</a></h3>
+                    <ul>
+                      <li><a href=""><img src="./assets/images/checkout/add-29.svg" alt="">Hoàng Đức Tuấn            </a></li>
+                      <li><a href="+84 936 255 358"><img src="./assets/images/checkout/phone.svg" alt="">+84 936 255 358            </a></li>
+                      <li><a href=""><img src="./assets/images/checkout/shape.svg" alt="">Tòa A Hồ Gươm plaza, Vũ Trọng Khánh, Phường Mộ Lao, Quận Hà Đông, Hà Nội  </a></li>
+                    </ul>
+                  </div>
+                  <div class="payment-group confirm-code">
+                    <h3 class="title confirm-code">Hình thức thanh toán<a href="checkout-desktop-2.html">Thay đổi</a></h3>
+                    <label class="paymentMethod cod">
+                      <div class="method active">
+                        <div class="icon"><img src="./assets/images/checkout/iconCOD.svg" alt=""></div>
+                        <div class="text">
+                          <h4>Thanh toán khi nhận hàng</h4><span>Bằng tiền mặt</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="section-checkout__right-item section-checkout__right-item--money confirm-code"><b>Thành tiền:</b><span class="money">900.000đ</span></div>
+                  <div class="desc-btn"><a class="btn-pay button btn-order" href=""> Đặt hàng </a></div>
+                  <div id="snackbar"> <i class="fas fa-check-circle"></i><span>Đặt hàng thành công</span></div>
+                </div>
               </div>
-              <div class="single-input"><span><img src="./assets/images/checkout-mb-1/phone.svg" alt="" srcset=""></span>
-                <input type="text" placeholder="Họ và tên">
-              </div>
-              <div class="single-input"><span><img src="./assets/images/checkout-mb-1/email.svg" alt="" srcset=""></span>
-                <input type="text" placeholder="Họ và tên">
-              </div>
-              <div class="single-input"><span><img src="./assets/images/checkout-mb-1/map.svg" alt="" srcset=""></span><select>
-<option value="placeholder" selected="selected" disabled="disabled">Chọn Tỉnh/TP</option>
-<option value="dn">Đà Nắng</option>
-<option value="tphcm">TPHCM</option>
-<option value="hn">Hà Nội</option>
-<option value="hue">Huế</option>
-<option value="cantho">Cần Thơ</option>
-</select>
-                <div class="icon-dropdown"><img src="./assets/images/checkout-mb-1/arrow.svg" alt=""></div>
-              </div>
-              <div class="single-input"><span><img src="./assets/images/checkout-mb-1/map.svg" alt="" srcset=""></span>
-                <input type="text" placeholder="Họ và tên">
-              </div>
-              <div class="textarea-wrap">     
-                <textarea placeholder="Ghi chú" style="height:94px"></textarea><img src="./assets/images/checkout-mb-1/icon-textarea.svg" alt="" srcset="">
-              </div>
-            </form>
-          </div><a class="btn_checkout-mb-1" href="./checkout-mobie-2.html">Tiếp tục</a>
+            </div>
+          </div>
         </div>
       </div>
       <section class="footer"> 
