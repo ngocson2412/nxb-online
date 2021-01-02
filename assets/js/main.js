@@ -36,6 +36,7 @@ $(document).ready(function () {
     orderProduct.init();
     homeSilder.init();
     homeSilderMobile.init();
+    cartmobilev2.init();
 
 });
 
@@ -363,15 +364,17 @@ const cartmobile = {
     },
     clickbtn:function(){
         $('.time-cart-mb').click(function(e){
-            $(this).closest('.time-cart-mb').find('.modal-radio').addClass('active');
+            $(this).next().addClass('active');
             e.stopPropagation();
         })
         $('.modal-radio__content-group').click(function(e){
-            $(this).parents().find('.time-cart-mb').find('.valua-time').attr("value", $.trim($(this).text()));
+            $(this).parents('.modal-radio').prev().find('.valua-time').attr("value", $.trim($(this).text()));
             $('.modal-radio').removeClass('active');
             e.stopPropagation();
         })
-
+        $('.modal-radio').click(function(){
+            $(this).removeClass('active');
+        })
     }
 }
 
@@ -562,5 +565,24 @@ const homeSilderMobile = {
             margin: 0,
         });
       $owl.trigger('refresh.owl.carousel');
+    }
+}
+/* ============================= 13, checkout cart-mbv2 ============================= */
+const cartmobilev2 = {
+    init:function(){
+        this.countmb();
+    },
+    countmb: function() {
+        let elementNum=$('.num-in')
+        for (let i = 0; i < elementNum.length; i++) {
+           if($(elementNum[i]).attr('number-product')==0){
+            $(elementNum[i]).addClass('hide');
+            $(elementNum[i]).find('.in-num').attr('disabled', true);
+            $(elementNum[i]).parents('.left-item__desc-item');
+            if($(elementNum[i]).parents('.left-item__desc-item')){
+                $(elementNum[i]).parents('.left-item__desc-item').find('span.color-33').addClass('colorHide');
+            }
+           }
+        }
     }
 }
