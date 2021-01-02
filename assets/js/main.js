@@ -2,6 +2,20 @@
 - 1, init
 - 2, scroll
 - 3, Menu Aim Master
+- 4, Lazy Loading Image
+- 5, Message reply
+- 6, Password show
+- 7, Author Modal
+- 8, quality Control
+- 9, active Choine
+- 10, checkout
+- 11, Typical
+- 12, checkout cart-mb
+- 13, Owl Slider
+- 14, Select 2 Filter Partner
+- 15, checkout click order
+- 16, Home Slider
+- 17, Home Slider Mobile
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function () {
@@ -63,7 +77,6 @@ const menuComponent = {
             deactivate: deactivateSubmenu
         });
         function activateSubmenu(row) {
-            console.log(row)
             var $row = $(row),
                 submenuId = $row.data("submenuId"),
                 $submenu = $("#" + submenuId),
@@ -169,7 +182,7 @@ const reply_comment ={
     }
 }
 
-/* ============================= 5, Password show ============================= */
+/* ============================= 6, Password show ============================= */
 const password_show = {
     init:function(){
         this.show();
@@ -186,7 +199,7 @@ const password_show = {
     }
 }
 
-/* ============================= 6, Author Modal ============================= */
+/* ============================= 7, Author Modal ============================= */
 const modalAuthor = {
     init:function(){
         this.showModal();
@@ -208,38 +221,37 @@ const modalAuthor = {
     }
 }
 
-/* ============================= 7, quality Control ============================= */
+/* ============================= 8, quality Control ============================= */
 const qualityControl = {
     init: function () {
       this.setupQuanlity('.js-qty-increase', '.js-qty-decrease', '.js-product-qty');
       this.setupQuanlity('.js-qty-increase-2', '.js-qty-decrease-2', '.js-product-qty-2')
     },
     setupQuanlity: function(increase, decrease, quality) {
-      let value = 1
-      const max = 12
-      const min = 1
-      const increaseBtn = document.querySelectorAll(increase)
-      const decreaseBtn = document.querySelectorAll(decrease)
-      const qualityView = document.querySelectorAll(quality)
-      if (increaseBtn && decreaseBtn && qualityView) {
-        increaseBtn.forEach((item, index) => item.addEventListener('click', () => {
-          if (value < max) {
-            value++
-            qualityView[index].innerHTML = value
-          }
-        }))
-
-        decreaseBtn.forEach((item, index) => item.addEventListener('click', () => {
-          if (value > min) {
-            value--
-            qualityView[index].innerHTML = value
-          }
-        }))
-      }
+        var minVal = 1, maxVal = 12; 
+        $(increase).on('click', function(){
+            var $parentElm = $(this).parents(".option-wrap");
+    
+            var value = $parentElm.find(quality).val();
+            if (value < maxVal) {
+              value++;
+            }
+            $parentElm.find(quality).val(value);
+        });
+        // Decrease product quantity on cart page
+        $(decrease).on('click', function(){
+            var $parentElm = $(this).parents(".option-wrap");
+           
+            var value = $parentElm.find(quality).val();
+            if (value > 1) {
+              value--;
+            }
+            $parentElm.find(quality).val(value);
+          });
     },
   }
 
-/* ============================= 8, active Choine  ============================= */
+/* ============================= 9, active Choine  ============================= */
 const optionsDetail = {
     init: function() {
       this.setupDetail('.category-li', '.category-li__item');
@@ -249,14 +261,13 @@ const optionsDetail = {
       if (wrap) {
         const optionsBtn = wrap.querySelectorAll(options)
         optionsBtn.forEach((item, index) => item.addEventListener('click', () => {
-          optionsBtn.forEach(btn => btn.classList.remove('active'))
-          item.classList.add('active')
+          item.classList.toggle('active')
         }))
       }
     }
   }
 
-/* ============================= 8, checkout ============================= */
+/* ============================= 10, checkout ============================= */
 const checkout = {
     init:function(){
         this.count();
@@ -314,7 +325,7 @@ const checkout = {
     }
 }
 
-/* ============================= 7, Typical Slider============================= */
+/* ============================= 11, Typical Slider============================= */
 const typicalSilder = {
     init:function(){
         this.typicalSilder();
@@ -345,7 +356,7 @@ const typicalSilder = {
     }
 }
 
-/* ============================= 9, checkout cart-mb ============================= */
+/* ============================= 12, checkout cart-mb ============================= */
 const cartmobile = {
     init:function(){
         this.clickbtn();
@@ -364,7 +375,7 @@ const cartmobile = {
     }
 }
 
-/* ============================= 8, Owl Slider============================= */
+/* ============================= 13, Owl Slider============================= */
 const owl = {
     init: function() {
         this.latestNewsSlider();
@@ -405,7 +416,7 @@ const owl = {
     }
 }
 
-/* ============================= 9, Select 2 Filter Partner ============================= */
+/* ============================= 14, Select 2 Filter Partner ============================= */
 const select_2 = {
     init:function(){
         this.select2()
@@ -459,7 +470,7 @@ const select_2 = {
     }
 }
 
-/* ============================= 10, checkout click order ============================= */
+/* ============================= 15, checkout click order ============================= */
 const orderProduct = {
     init:function(){
         this.clickOrder();
@@ -473,7 +484,7 @@ const orderProduct = {
     }
 }
 
-/* ============================= 11, Home Slider ============================= */
+/* ============================= 16, Home Slider ============================= */
 const homeSilder = {
     init: function () {
         this.homeSlider();
@@ -514,7 +525,7 @@ const homeSilder = {
     }
 }
 
-/* ============================= 12, Home Slider Mobile ============================= */
+/* ============================= 17, Home Slider Mobile ============================= */
 const homeSilderMobile = {
     init: function () {
         this.homeSliderMb();

@@ -1349,14 +1349,16 @@
                           <div class="cart-bg">
                             <ul class="category-li"> 
                               <li class="li-item"> 
-                                <div class="category-li__item active fas">
+                                <label class="category-li__item fas" for="rental-book">
                                   <p class="title">Thuê Eboook </p><span class="item-price">15.000đ</span>
-                                </div>
+                                </label>
+                                <input type="checkbox" id="rental-book" style="display:none">
                                 <div class="amout-options flex items-center">
                                   <div class="option-wrap flex items-center">
                                     <div class="button minus js-qty-decrease">-</div>
-                                    <div class="amount"><span class="js-product-qty">3 </span>
-                                      <p class="mounth ml-1">tháng    </p>
+                                    <div class="amount">
+                                      <input class="number js-product-qty" type="text" value="3">
+                                      <p class="mounth ml-1 mr-2">tháng </p>
                                     </div>
                                     <div class="button plus js-qty-increase">+  </div>
                                   </div>
@@ -1365,14 +1367,17 @@
                               <li>
                                 <div class="line"></div>
                               </li>
-                              <li class="li-item"> 
-                                <div class="category-li__item fas"> 
+                              <li class="li-item">
+                                <label class="category-li__item fas" for="buy-book">
                                   <p class="title">Mua Sách Giấy</p><span class="item-price">150.000đ</span>
-                                </div>
+                                </label>
+                                <input type="checkbox" id="buy-book" style="display:none">
                                 <div class="amout-options flex items-center">
                                   <div class="option-wrap flex items-center">
                                     <div class="button minus js-qty-decrease-2">-</div>
-                                    <div class="amount js-product-qty-2"> <span class="ml-1">1</span></div>
+                                    <div class="amount">
+                                      <input class="number js-product-qty-2" type="text" value="1">
+                                    </div>
                                     <div class="button plus js-qty-increase-2">+                      </div>
                                   </div>
                                 </div>
@@ -1461,7 +1466,7 @@
                                           </svg></span></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên</p>
                                     </div>
                                   </div>
                                 </div>
@@ -1470,7 +1475,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên</p>
                                     </div>
                                   </div>
                                 </div>
@@ -1479,7 +1484,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên</p>
                                     </div>
                                   </div>
                                 </div>
@@ -1488,7 +1493,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên</p>
                                     </div>
                                   </div>
                                 </div>
@@ -1496,13 +1501,10 @@
                               <div class="row border-ct">
                                 <div class="col-6 col-sm-4 col-md-3 box-item">
                                   <div class="author__item">
-                                    <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""><span class="img__check">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewbox="0 0 10 10" fill="none">
-                                            <path d="M5.00016 0.833374C2.69808 0.833374 0.833496 2.69796 0.833496 5.00004C0.833496 7.30004 2.69808 9.16671 5.00016 9.16671C7.30016 9.16671 9.16683 7.30004 9.16683 5.00004C9.16683 2.69796 7.30016 0.833374 5.00016 0.833374ZM4.16683 7.08337L2.0835 5.00004L2.67308 4.41046L4.16683 5.90421L7.32725 2.74379L7.91683 3.33337L4.16683 7.08337Z" fill="#27AE34"></path>
-                                          </svg></span></a></div>
+                                    <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên                           </p>
                                     </div>
                                   </div>
                                 </div>
@@ -1511,7 +1513,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên                           </p>
                                     </div>
                                   </div>
                                 </div>
@@ -1520,7 +1522,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên                           </p>
                                     </div>
                                   </div>
                                 </div>
@@ -1529,7 +1531,7 @@
                                     <div class="author__item-img"><a class="img__links" href="#"><img src="./assets/images/author-avatar/author-avatar-1.png" alt=""></a></div>
                                     <div class="author__item-info">
                                       <h6 class="info__title">Tác giả</h6>
-                                      <p class="info__name">Dương Vân Yên       </p>
+                                      <p class="info__name">Dương Vân Yên                           </p>
                                     </div>
                                   </div>
                                 </div>
@@ -1652,7 +1654,7 @@
             <div class="row new-book">
               <div class="col-lg-6">
                                 <div class="book__box">
-                                  <div class="heading">Sách mới</div>
+                                  <div class="heading">Sách cùng chủ đề</div>
                                   <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-6">
                                       <div class="books__box">   
@@ -1795,24 +1797,6 @@
                                     </div>
                                   </div>
                                 </div>
-              </div>
-            </div>
-            <div class="row"> 
-              <div class="col-lg-12"> 
-                <div class="partner__wrap">
-                  <div class="partner__content">
-                    <div class="partner__head">
-                      <h2 class="partner__title-title">Đối tác tiêu biểu</h2>
-                      <div class="partner__title-vector"></div>
-                    </div>
-                    <div class="partner__list d-flex justify-content-center"><a class="partner__list-link">
-                        <div class="link__thumb d-flex justify-content-center align-items-center"><img class="link__thumb-img" src="./assets/images/partner/p147-0428102815.png" alt=""></div></a><a class="partner__list-link">
-                        <div class="link__thumb d-flex justify-content-center align-items-center"><img class="link__thumb-img" src="./assets/images/partner/dv01.png" alt=""></div></a><a class="partner__list-link">
-                        <div class="link__thumb d-flex justify-content-center align-items-center"><img class="link__thumb-img" src="./assets/images/partner/logodhxd-0508103657.png" alt=""></div></a><a class="partner__list-link">
-                        <div class="link__thumb d-flex justify-content-center align-items-center"><img class="link__thumb-img" src="./assets/images/partner/download-0508104126.png" alt=""></div></a><a class="partner__list-link">
-                        <div class="link__thumb d-flex justify-content-center align-items-center"><img class="link__thumb-img" src="./assets/images/partner/ftuslogo-0508104421.png" alt=""></div></a></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

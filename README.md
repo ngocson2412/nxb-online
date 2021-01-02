@@ -34,7 +34,7 @@ Mobie
   - 21 Các danh mục:  list-category-mobile.html
   - 22 Sách trong danh mục:  category-mobile.html
 
-  - Desktop
+Desktop
   - 1 Trang chủ mobie : index-desktop.html
   - 2 Trang chi tiết sách : book-detail-desktop.html
   - 3 Trang giỏ hàng : cart-desktop.html
