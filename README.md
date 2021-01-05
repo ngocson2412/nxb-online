@@ -18,11 +18,13 @@ Mobie
   - 1 Trang chủ mobie : index-mobile.html
   - 2 Trang chi tiết sách : book-detail-mobile-1.html
   - 2.1 Trang chi tiết sách | nhiều tác giả : book-detail-mobile-2.html
+  - 2.2Trang chi tiet đọc thử : out-of-free-trial.html
   - 3 Trang giỏ hàng : cart-mobile.html
   - 4.1 Thông tin người dùng : checkout-mobile-1.html
   - 4.1 Thông tin người dùng : checkout-mobile-2.html
   - 4.2 Thông tin người dùng | phương thức thanh toán : checkout-mobile-3.html
   - 4.2 Thông tin người dùng | xác nhận đơn hàng : checkout-mobile-4.html
+  - 4.1 Thanh toán Desktop Overlay : checkout-modal.html
   - 10 Đăng nhập: login-mobile.html
   - 11 Đăng ký: register-mobile.html
   - 12 Tài khoản của bạn: my-account-mobile-main.html
