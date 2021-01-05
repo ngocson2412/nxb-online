@@ -159,6 +159,7 @@
          */
         var activate = function(row) {
                 if (row == activeRow) {
+                    options.activate(row);
                     return;
                 }
 
