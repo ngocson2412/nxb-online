@@ -57,6 +57,7 @@
         </div>
       </div>
       <div class="menu__component">
+        <div class="menu__component-overlay"></div>
         <div class="container">
           <div class="menu__component__wrap d-flex align-items-center">
             <div class="menu__category d-flex align-items-center active">
@@ -1086,7 +1087,7 @@
                             <ul class="category-li"> 
                               <li class="li-item">
                                 <label class="category-li__item fas" for="rental-book">
-                                  <p class="title">Thuê Eboook </p><span class="item-price">15.000đ</span>
+                                  <p class="title item_left">Thuê Eboook </p><span class="item-price">15.000đ</span>
                                 </label>
                                 <input type="checkbox" id="rental-book" style="display:none">
                                 <div class="amout-options flex items-center">
@@ -1169,51 +1170,47 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="comment-box">
-                  <h3 class="comment__title">Bình luận</h3>
-                  <div class="comment__list"> 
-                    <div class="comment__list-user"> 
-                      <div class="user__avatar">T </div>
-                      <div class="user__name">Duy Phương </div>
-                    </div>
-                    <div class="comment__list-content"> 
-                      <p class="list-content__cm">Sách rất hay và chất lượng .Qúa tuyệt vời ! </p>
-                      <p class="list-content__reply"> <span class="content__reply-name">Trả lời </span><small>-23 giờ trước </small></p>
-                      <div class="comment__list-rectangle"> 
-                        <div class="comment__list-user"> 
-                          <div class="user__avatar">D</div>
-                          <div class="user__name"> Thành Luân <span class="name-role">Quản trị viên </span></div>
-                        </div>
-                        <div class="comment__list-content"> 
-                          <p class="list-content__cm"> <span class="cm-greeting">Chào bạn! </span><br><span>Bạn đang cần tư vấn gì đấy .Vui lòng liên hệ với chúng tôi ^^.</span><br><span>Xin cảm ơn bạn. </span></p>
-                          <p class="list-content__reply"> <span class="content__reply-name">Trả lời </span><small>-23 giờ trước </small></p>
-                        </div>
+                <div class="col-lg-12 pl-0 pr-0">
+                  <div class="comment-box">
+                    <h3 class="comment__title">Bình luận</h3>
+                    <div class="comment__list"> 
+                      <div class="comment__list-user"> 
+                        <div class="user__avatar">T </div>
+                        <div class="user__name">Duy Phương </div>
                       </div>
-                      <div class="comment__reply">
-                        <form> 
-                          <div class="comment__avatar"> 
-                            <div class="avt">M </div>
-                            <input class="reply" type="text" placeholder="Viết câu trả lời ..">
+                      <div class="comment__list-content"> 
+                        <p class="list-content__cm">Sách rất hay và chất lượng .Qúa tuyệt vời ! </p>
+                        <p class="list-content__reply"> <span class="content__reply-name">Trả lời </span><small>-23 giờ trước </small></p>
+                        <div class="comment__list-rectangle"> 
+                          <div class="comment__list-user"> 
+                            <div class="user__avatar">D</div>
+                            <div class="user__name"> Thành Luân <span class="name-role">Quản trị viên </span></div>
                           </div>
-                        </form>
+                          <div class="comment__list-content"> 
+                            <p class="list-content__cm"> <span class="cm-greeting">Chào bạn! </span><br><span>Bạn đang cần tư vấn gì đấy .Vui lòng liên hệ với chúng tôi ^^.</span><br><span>Xin cảm ơn bạn. </span></p>
+                            <p class="list-content__reply"> <span class="content__reply-name">Trả lời </span><small>-23 giờ trước </small></p>
+                          </div>
+                        </div>
+                        <div class="comment__reply">
+                          <form> 
+                            <div class="comment__avatar"> 
+                              <div class="avt">M </div>
+                              <input class="reply" type="text" placeholder="Viết câu trả lời ..">
+                            </div>
+                          </form>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="comment__text">
-                    <form> 
-                      <div class="form__contend">
-                        <div class="message__form">
-                          <textarea class="message" placeholder="Để lại bình luận của bạn..."></textarea><img class="icon-mess lazy" data-src="./assets/images/comment/icon.png" src="./assets/images/comment/icon.png" alt="icon_rightdown">
+                    <div class="comment__text">
+                      <form> 
+                        <div class="form__contend">
+                          <div class="message__form">
+                            <textarea class="message" placeholder="Để lại bình luận của bạn..."></textarea><img class="icon-mess lazy" data-src="./assets/images/comment/icon.png" src="./assets/images/comment/icon.png" alt="icon_rightdown">
+                          </div>
+                          <p class="btn-submit"> <a href="#">Gửi bình luận </a></p>
                         </div>
-                        <p class="btn-submit"> <a href="#">Gửi bình luận </a></p>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>

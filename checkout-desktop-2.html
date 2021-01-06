@@ -57,6 +57,7 @@
         </div>
       </div>
       <div class="menu__component">
+        <div class="menu__component-overlay"></div>
         <div class="container">
           <div class="menu__component__wrap d-flex align-items-center">
             <div class="menu__category d-flex align-items-center active">
@@ -1064,7 +1065,7 @@
                           <div class="form-group">
                             <label for="">Họ và tên</label>
                             <div class="input-group"><span class="form-icon"><i class="fas fa-user"></i></span>
-                              <input class="form-control" type="text" placeholder="Họ và tên" aria-label="Họ và tên">
+                              <input class="form-control hover-input" type="text" placeholder="Họ và tên" aria-label="Họ và tên">
                             </div>
                           </div>
                         </div>
@@ -1072,7 +1073,7 @@
                           <div class="form-group">
                             <label for="">Số điện thoại</label>
                             <div class="input-group"><span class="form-icon"><i class="fas fa-phone-alt"></i></span>
-                              <input class="form-control" type="phone" placeholder="Số điện thoại" aria-label="Số điện thoại">
+                              <input class="form-control hover-input" type="phone" placeholder="Số điện thoại" aria-label="Số điện thoại">
                             </div>
                           </div>
                         </div>
@@ -1080,7 +1081,7 @@
                           <div class="form-group">
                             <label for="">Email</label>
                             <div class="input-group"><span class="form-icon"><i class="fas fa-envelope"></i></span>
-                              <input class="form-control" type="Email" placeholder="Email" aria-label="Email">
+                              <input class="form-control hover-input" type="Email" placeholder="Email" aria-label="Email">
                             </div>
                           </div>
                         </div>
@@ -1089,13 +1090,14 @@
                             <label for="">Chọn Tỉnh/TP</label>
                             <div class="input-group"><span class="form-icon"><i class="fas fa-map-marked-alt"></i></span>
                               <div class="dropdow-adress form-control click-show-dropdow">
-                                <input class="valua-time" type="text" value="Chọn Tỉnh/TP" disabled="disabled"><i class="fas fa-caret-down"></i>
-                                <ul class="dropdow">
-                                  <li><i class="fas fa-check"></i><span>1 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>3 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>6 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>Vĩnh viễn</span></li>
-                                </ul>
+                                <select class="select-option">
+                                  <option value="placeholder" selected="" disabled="">Chọn Tỉnh/TP</option>
+                                  <option value="dn">Đà Nắng</option>
+                                  <option value="tphcm">TPHCM</option>
+                                  <option value="hn">Hà Nội</option>
+                                  <option value="hue">Huế</option>
+                                  <option value="cantho">Cần Thơ</option>
+                                </select><img class="lazy entered loaded" alt="" src="./assets/images/checkout-mb-1/arrow.svg">
                               </div>
                             </div>
                           </div>
@@ -1105,13 +1107,14 @@
                             <label for="">Chọn Quận/Huyện</label>
                             <div class="input-group"><span class="form-icon"><i class="fas fa-map-marked-alt"></i></span>
                               <div class="dropdow-adress form-control click-show-dropdow">
-                                <input class="valua-time" type="text" value="Chọn Quận/Huyện" disabled="disabled"><i class="fas fa-caret-down"></i>
-                                <ul class="dropdow">
-                                  <li><i class="fas fa-check"></i><span>1 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>3 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>6 tháng</span></li>
-                                  <li><i class="fas fa-check"></i><span>Vĩnh viễn</span></li>
-                                </ul>
+                                <select class="select-option">
+                                  <option value="placeholder" selected="" disabled="">Chọn Tỉnh/TP</option>
+                                  <option value="dn">Đà Nắng</option>
+                                  <option value="tphcm">TPHCM</option>
+                                  <option value="hn">Hà Nội</option>
+                                  <option value="hue">Huế</option>
+                                  <option value="cantho">Cần Thơ</option>
+                                </select><img class="lazy entered loaded" alt="" src="./assets/images/checkout-mb-1/arrow.svg">
                               </div>
                             </div>
                           </div>
@@ -1119,8 +1122,8 @@
                         <div class="col-12">
                           <div class="form-group">
                             <label for="">Địa chỉ</label>
-                            <div class="input-group"><span class="form-icon"><i class="fas fa-envelope"></i></span>
-                              <input class="form-control" type="text" placeholder="Nhập vị trí" aria-label="Địa chỉ">
+                            <div class="input-group"><span class="form-icon"><i class="fas fa-map-marker-alt"></i></span>
+                              <input class="form-control hover-input" type="text" placeholder="Nhập vị trí" aria-label="Địa chỉ">
                             </div>
                           </div>
                         </div>
@@ -1128,7 +1131,7 @@
                           <div class="form-group">
                             <label for="">Ghi chú</label>
                             <div class="input-group form-area">
-                              <textarea name="user_bio" placeholder="Nhập nội dung"></textarea>
+                              <textarea class="hover-input" name="user_bio" placeholder="Nhập nội dung"></textarea>
                               <div class="form-area__icon"><img class="lazy" data-src="./assets/images/checkout/Icon.svg" alt=""></div>
                             </div>
                           </div>

@@ -18,7 +18,7 @@
 - 17, Home Slider Mobile
 - 18, checkout cart-mbv2
 - 19, Checkout Modal
-
+- 20, MegaMenu Modal
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function() {
@@ -41,6 +41,7 @@ $(document).ready(function() {
     homeSilderMobile.init();
     cartmobilev2.init();
     checkoutModal.init()
+    megaMenuOverlay.init();
 });
 
 /* ============================= 2, Scroll ============================= */
@@ -279,7 +280,8 @@ const checkout = {
         this.count();
         this.tabPayment();
         this.clickSettime();
-        this.removeProduct()
+        this.removeProduct();
+        this.onchange();
     },
     count: function() {
         $('.num-in .plus').click(function() {
@@ -314,7 +316,14 @@ const checkout = {
             $(this).find(".dropdow").toggleClass('active');
         })
         $('.click-show-dropdow .dropdow li').click(function() {
-            $(this).parent().parent().find('.valua-time').attr("value", $(this).text());
+            let valuatext=$(this).find('.get-valua-text').text();
+            let valuaNumber=$(this).find('.get-valua-number').attr('value');
+            $(this).parent().parent().find('.valua-time').attr("value", $.trim(valuaNumber));
+            $(this).parent().parent().find('.time-text').text($.trim(valuatext));
+            if($(this).parent().parent().find('.adress')){
+                $(this).parent().parent().find('.adress').addClass('active');
+                
+            }
         })
 
     },
@@ -328,6 +337,11 @@ const checkout = {
                 $(this).remove();
             });
         });
+    },
+    onchange:function(){
+        $('.select-option').change(function(){
+            $(this).css({"color": "#4f4f4f", "font-size": "16px","font-weight":"500"});
+        })
     }
 }
 
@@ -373,7 +387,10 @@ const cartmobile = {
             e.stopPropagation();
         })
         $('.modal-radio__content-group').click(function(e) {
-            $(this).parents('.modal-radio').prev().find('.valua-time').attr("value", $.trim($(this).text()));
+            let valuaNum=$(this).find('.radio-input').attr('valua');
+            let valuaText=$(this).find('.text').text();
+            $(this).parents('.modal-radio').prev().find('.valua-time').attr("valua",$.trim(valuaNum));
+            $(this).parents('.modal-radio').prev().find('.time-text').text($.trim(valuaText));
             $('.modal-radio').removeClass('active');
             e.stopPropagation();
         })
@@ -612,4 +629,22 @@ const checkoutModal = {
             modal.removeClass('active')
         })
     },
+}
+    /* ============================= 20, MegaMenu Overlay  ============================= */
+const megaMenuOverlay = {
+    init: function() {
+        this.overlayMega();
+    },
+    overlayMega:function() {
+        const wrap = $('.wrapper');
+        const menu = $('.dropdown-menu');
+        const overlay = $('.menu__component-overlay');
+        overlay.css('height', wrap.height());
+        menu.mouseover(function() {
+            overlay.show();
+        })
+        menu.mouseout(function() {
+            overlay.hide();
+        })
+    }
 }
