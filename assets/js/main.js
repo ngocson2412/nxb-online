@@ -19,6 +19,7 @@
 - 18, checkout cart-mbv2
 - 19, Checkout Modal
 - 20, MegaMenu Modal
+- 21, Fix Pagination 
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function() {
@@ -126,10 +127,15 @@ const menuComponent = {
         });
     },
     toggleCategory: function() {
-        const categoryBtn = $('.menu__category')
-        categoryBtn.click(() => {
-            categoryBtn.toggleClass('active')
-        })
+        const categoryBtn = $('.menu__category');
+        if(categoryBtn.hasClass('menu__index')) {
+            categoryBtn.addClass('active');
+        }
+        else {
+            categoryBtn.hover(() => {
+                categoryBtn.toggleClass('active');
+            })
+        }
     },
     mainMenuMobile: function() {
         const body = document.querySelector('body')
