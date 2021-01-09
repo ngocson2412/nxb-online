@@ -1091,13 +1091,24 @@
                                 </label>
                                 <input type="checkbox" id="rental-book" style="display:none">
                                 <div class="amout-options flex items-center">
-                                  <div class="option-wrap flex items-center">
-                                    <div class="button minus js-qty-decrease">-</div>
-                                    <div class="amount rental__amount">
-                                      <input class="number js-product-qty" type="text" value="3">
-                                      <p class="mounth ml-1 mr-2">tháng    </p>
+                                  <div class="option__rental-book">
+                                    <div class="time click-show-dropdow">
+                                      <input class="valua-time" type="hidden" value="1"><span class="time-text">1 tháng</span><i class="fas fa-angle-down"></i>
+                                      <ul class="dropdow">
+                                        <li>
+                                          <input class="get-valua-number" type="hidden" value="1"><i class="fas fa-check"></i><span class="get-valua-text">1 tháng</span>
+                                        </li>
+                                        <li>
+                                          <input class="get-valua-number" type="hidden" value="3"><i class="fas fa-check"></i><span class="get-valua-text">3 tháng</span>
+                                        </li>
+                                        <li>
+                                          <input class="get-valua-number" type="hidden" value="6"><i class="fas fa-check"></i><span class="get-valua-text">6 tháng</span>
+                                        </li>
+                                        <li>
+                                          <input class="get-valua-number" type="hidden" value="999"><i class="fas fa-check"></i><span class="get-valua-text">Vĩnh viễn</span>
+                                        </li>
+                                      </ul>
                                     </div>
-                                    <div class="button plus js-qty-increase">+  </div>
                                   </div>
                                 </div>
                               </li>
@@ -1106,7 +1117,7 @@
                               </li>
                               <li class="li-item">
                                 <label class="category-li__item fas" for="buy-book">
-                                  <p class="title">Mua Sách Giấy</p><span class="item-price">150.000đ</span>
+                                  <p class="title">Sách Giấy</p><span class="item-price">150.000đ</span>
                                 </label>
                                 <input type="checkbox" id="buy-book" style="display:none">
                                 <div class="amout-options flex items-center">

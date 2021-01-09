@@ -236,7 +236,6 @@ const modalAuthor = {
 /* ============================= 8, quality Control ============================= */
 const qualityControl = {
     init: function() {
-        this.setupQuanlity('.js-qty-increase', '.js-qty-decrease', '.js-product-qty');
         this.setupQuanlity('.js-qty-increase-2', '.js-qty-decrease-2', '.js-product-qty-2')
     },
     setupQuanlity: function(increase, decrease, quality) {
@@ -328,7 +327,6 @@ const checkout = {
             $(this).parent().parent().find('.time-text').text($.trim(valuatext));
             if($(this).parent().parent().find('.adress')){
                 $(this).parent().parent().find('.adress').addClass('active');
-                
             }
         })
 
