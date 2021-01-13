@@ -43,6 +43,7 @@ $(document).ready(function() {
     cartmobilev2.init();
     checkoutModal.init()
     megaMenuOverlay.init();
+    modalOrderDetail.init();
 });
 
 /* ============================= 2, Scroll ============================= */
@@ -73,8 +74,9 @@ const menuComponent = {
     init: function() {
         this.setupMenu()
         this.toggleCategory()
-        this.subMenuMobile()
         this.mainMenuMobile()
+        this.subMenuMobile()
+        this.subMenuMobileLv2()
     },
     setupMenu: function() {
         var $menu = $(".dropdown-menu");
@@ -154,11 +156,31 @@ const menuComponent = {
         }
     },
     subMenuMobile: function() {
-        const categoryLink = document.querySelectorAll('.menu__list-mobile .menu__list__wrap > li')
-        categoryLink.forEach((item, index) => item.addEventListener('click', (e) => {
-            e.preventDefault()
-            item.classList.toggle('active')
-        }))
+        const categoryLink = $(".menu__list-mobile .menu__list__wrap > li a")
+        categoryLink.bind("click", function (e) {
+            const isExistSubmenu = $(this).parent().find(".popover__submenu")
+            if (isExistSubmenu.length !=0) {
+                e.preventDefault();
+                $(this).parent().toggleClass('active');
+                isExistSubmenu.slideToggle("slow");
+            }
+        })
+    },
+    subMenuMobileLv2: function() {
+        const categoryLink = $(".menu__list-mobile .popover__submenu li > .category__link")
+        categoryLink.bind("click", function (e) {
+            const isExistSubmenu = $(this).parent().find(".submenu__item")
+            if (isExistSubmenu.length !=0) {
+                e.preventDefault();
+                isExistSubmenu.slideToggle("slow", function () {
+                    if (isExistSubmenu.css('display') == 'none') {
+                        $(this).parent().removeClass('active');
+                    } else {
+                        $(this).parent().addClass('active');
+                    }
+                })
+            }
+        })
     },
 }
 
@@ -556,63 +578,63 @@ const homeSilder = {
 
 /* ============================= 17, Home Slider Mobile ============================= */
 const homeSilderMobile = {
-        init: function() {
-            this.homeSliderMb();
-        },
-        homeSliderMb: function() {
-            var $owl = $(".home-sliderMb__inner .owl-carousel").owlCarousel({
-                items: 1,
-                responsive: {
-                    1024: {
-                        item: 1
-                    },
-                    991: {
-                        items: 1
-                    },
-                    768: {
-                        items: 1
-                    },
-                    320: {
-                        items: 1
-                    },
-                    0: {
-                        items: 1
-                    }
+    init: function() {
+        this.homeSliderMb();
+    },
+    homeSliderMb: function() {
+        var $owl = $(".home-sliderMb__inner .owl-carousel").owlCarousel({
+            items: 1,
+            responsive: {
+                1024: {
+                    item: 1
                 },
-                loop: true,
-                rewind: false,
-                autoplay: true,
-                autoplayTimeout: 6000,
-                autoplayHoverPause: true,
-                smartSpeed: 500,
-                mouseDrag: true,
-                nav: false,
-                autoWidth: false,
-                margin: 0,
-            });
-            $owl.trigger('refresh.owl.carousel');
-        }
+                991: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                320: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            },
+            loop: true,
+            rewind: false,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            mouseDrag: true,
+            nav: false,
+            autoWidth: false,
+            margin: 0,
+        });
+        $owl.trigger('refresh.owl.carousel');
     }
-    /* ============================= 18, checkout cart-mbv2 ============================= */
+}
+/* ============================= 18, checkout cart-mbv2 ============================= */
 const cartmobilev2 = {
-        init: function() {
-            this.countmb();
-        },
-        countmb: function() {
-            let elementNum = $('.num-in')
-            for (let i = 0; i < elementNum.length; i++) {
-                if ($(elementNum[i]).attr('number-product') == 0) {
-                    $(elementNum[i]).addClass('hide');
-                    $(elementNum[i]).find('.in-num').attr('disabled', true);
-                    $(elementNum[i]).parents('.left-item__desc-item');
-                    if ($(elementNum[i]).parents('.left-item__desc-item')) {
-                        $(elementNum[i]).parents('.left-item__desc-item').find('span.color-33').addClass('colorHide');
-                    }
+    init: function() {
+        this.countmb();
+    },
+    countmb: function() {
+        let elementNum = $('.num-in')
+        for (let i = 0; i < elementNum.length; i++) {
+            if ($(elementNum[i]).attr('number-product') == 0) {
+                $(elementNum[i]).addClass('hide');
+                $(elementNum[i]).find('.in-num').attr('disabled', true);
+                $(elementNum[i]).parents('.left-item__desc-item');
+                if ($(elementNum[i]).parents('.left-item__desc-item')) {
+                    $(elementNum[i]).parents('.left-item__desc-item').find('span.color-33').addClass('colorHide');
                 }
             }
         }
     }
-    /* ============================= 19, Checkout Modal  ============================= */
+}
+/* ============================= 19, Checkout Modal  ============================= */
 const checkoutModal = {
     init: function() {
         this.setupModal()
@@ -634,7 +656,7 @@ const checkoutModal = {
         })
     },
 }
-    /* ============================= 20, MegaMenu Overlay  ============================= */
+/* ============================= 20, MegaMenu Overlay  ============================= */
 const megaMenuOverlay = {
     init: function() {
         this.overlayMega();
@@ -649,6 +671,30 @@ const megaMenuOverlay = {
         })
         menu.mouseout(function() {
             overlay.hide();
+        })
+    }
+}
+/* ============================= 21, modal orderDetail  ============================= */
+const modalOrderDetail = {
+    init: function() {
+        this.orderDetail();
+    },
+    orderDetail:function() {
+        $('.see').click(function(){
+            $('.modal-orderDetail-ovelay').addClass('active');
+            $('.modal-orderDetail').addClass('active');
+            $('html').css({"overflow": "hidden"})
+        })
+        $('.orderDetail-content__close').click(function(){
+            $('.modal-orderDetail-ovelay').removeClass('active');
+            $('.modal-orderDetail').removeClass('active');
+            $('html').css({"overflow": "unset"})
+
+        })
+        $('.modal-orderDetail-ovelay').click(function(){
+            $(this).removeClass('active');
+            $('.modal-orderDetail').removeClass('active');
+            $('html').css({"overflow": "unset"})
         })
     }
 }
