@@ -162,7 +162,7 @@ const menuComponent = {
             if (isExistSubmenu.length !=0) {
                 e.preventDefault();
                 $(this).parent().toggleClass('active');
-                isExistSubmenu.slideToggle("slow");
+                isExistSubmenu.slideToggle("fast");
             }
         })
     },
@@ -172,7 +172,7 @@ const menuComponent = {
             const isExistSubmenu = $(this).parent().find(".submenu__item")
             if (isExistSubmenu.length !=0) {
                 e.preventDefault();
-                isExistSubmenu.slideToggle("slow", function () {
+                isExistSubmenu.slideToggle("fast", function () {
                     if (isExistSubmenu.css('display') == 'none') {
                         $(this).parent().removeClass('active');
                     } else {
