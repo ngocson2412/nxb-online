@@ -20,6 +20,7 @@
 - 19, Checkout Modal
 - 20, MegaMenu Modal
 - 21, Fix Pagination 
+- 23, Sweet Alert
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function() {
@@ -44,6 +45,7 @@ $(document).ready(function() {
     checkoutModal.init()
     megaMenuOverlay.init();
     modalOrderDetail.init();
+    sweetAlert.init();
 });
 
 /* ============================= 2, Scroll ============================= */
@@ -366,7 +368,7 @@ const checkout = {
     },
     onchange:function(){
         $('.select-option').change(function(){
-            $(this).css({"color": "#4f4f4f", "font-size": "16px","font-weight":"500"});
+            $(this).css({"color": "#02010E", "font-size": "16px","font-weight":"500"});
         })
     }
 }
@@ -528,9 +530,9 @@ const orderProduct = {
     },
     clickOrder: function() {
         $('.btn-order').click(function(e) {
-            e.preventDefault();
-            $('#snackbar').addClass('show')
-            setTimeout(function() { $('#snackbar').removeClass('show') }, 3000);
+            // e.preventDefault();
+            // $('#snackbar').addClass('show')
+            // setTimeout(function() { $('#snackbar').removeClass('show') }, 3000);
         })
     }
 }
@@ -665,11 +667,18 @@ const megaMenuOverlay = {
         const wrap = $('.wrapper');
         const menu = $('.dropdown-menu');
         const overlay = $('.menu__component-overlay');
+        const menuBtn = $('.menu__category');
         overlay.css('height', wrap.height());
         menu.mouseover(function() {
             overlay.show();
         })
         menu.mouseout(function() {
+            overlay.hide();
+        })
+        menuBtn.mouseover(function() {
+            overlay.show();
+        })
+        menuBtn.mouseout(function() {
             overlay.hide();
         })
     }
@@ -680,21 +689,40 @@ const modalOrderDetail = {
         this.orderDetail();
     },
     orderDetail:function() {
-        $('.see').click(function(){
-            $('.modal-orderDetail-ovelay').addClass('active');
-            $('.modal-orderDetail').addClass('active');
-            $('html').css({"overflow": "hidden"})
-        })
-        $('.orderDetail-content__close').click(function(){
+        let idOrder;
+       $('.see').click(function(){
+           idOrder=$(this).attr('id-orderDetail');
+           $('.modal-orderDetail-ovelay').addClass('active');
+           if(idOrder){
+            $(idOrder).addClass('active')
+           }
+           $('html').css({"overflow": "hidden"})
+       })
+       $('.orderDetail-content__close').click(function(){
             $('.modal-orderDetail-ovelay').removeClass('active');
-            $('.modal-orderDetail').removeClass('active');
-            $('html').css({"overflow": "unset"})
-
-        })
-        $('.modal-orderDetail-ovelay').click(function(){
+            $(idOrder).removeClass('active');
+           $('html').css({"overflow": "unset"})
+       })
+       $('.modal-orderDetail-ovelay').click(function(){
             $(this).removeClass('active');
-            $('.modal-orderDetail').removeClass('active');
+            $(idOrder).removeClass('active');
             $('html').css({"overflow": "unset"})
         })
+    }
+}
+/* ============================= 23, sweet Alert  ============================= */
+const sweetAlert = {
+    init:function() {
+        this.alertPopUp();
+    },
+    alertPopUp:function() {
+        for(var i = 0; i < 6; i++) {
+            console.log($('.button').eq(i));
+            $('.button').eq(i).click(function(e) {
+                var data = $(this).data('id');
+                console.log(e.target);
+                $(data).stop().fadeIn(400).delay(1000).fadeOut(400);
+            })
+        }
     }
 }
