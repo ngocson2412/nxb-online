@@ -21,6 +21,7 @@
 - 20, MegaMenu Modal
 - 21, Fix Pagination 
 - 23, Sweet Alert
+- 24, FixScrollbarOpenCheckoutModal
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function() {
@@ -46,6 +47,7 @@ $(document).ready(function() {
     megaMenuOverlay.init();
     modalOrderDetail.init();
     sweetAlert.init();
+    fixScrollBarCheckout.init();
 });
 
 /* ============================= 2, Scroll ============================= */
@@ -714,15 +716,50 @@ const modalOrderDetail = {
 const sweetAlert = {
     init:function() {
         this.alertPopUp();
+        this.toastMessage();
     },
     alertPopUp:function() {
-        for(var i = 0; i < 6; i++) {
-            console.log($('.button').eq(i));
-            $('.button').eq(i).click(function(e) {
-                var data = $(this).data('id');
-                console.log(e.target);
-                $(data).stop().fadeIn(400).delay(1000).fadeOut(400);
-            })
-        }
+        $('.btn-alert').click(function() {
+            var data = $(this).data('class');
+            $(data).closest('.alert-modal-content').addClass('active');
+            $('html').css({"overflow": "hidden"});
+        })
+        $('.close-modal').click(function(e){
+            e.preventDefault();
+            $('.alert-modal-content').removeClass('active');
+            $('html').css({"overflow": "unset"});
+            e.stopPropagation();
+        })
+        $('.alert-modal-content').click(function(){
+            $('html').css({"overflow": "unset"});
+            $(this).removeClass('active');
+        })
+        $('.alert-modal').click(function(e){
+            e.stopPropagation()
+        })
+    },
+    toastMessage:function() {
+        $('.btn-toast-mess').click(function() {
+            var data = $(this).data('class');
+            $(data).closest('.toast-mess__wrap').addClass('active');
+            setTimeout(function() { $(data).closest('.toast-mess__wrap').removeClass('active') }, 3000);
+        })
+    }
+}
+/* ============================= 24, FixScrollbarOpenCheckoutModal ============================= */
+const fixScrollBarCheckout = {
+    init:function() {
+        this.fixScrollBar();
+    },
+    fixScrollBar:function() {
+        var checkoutModal = $('.checkout__modal__wrapper');
+        if(checkoutModal.hasClass('active')) {
+            $("body").addClass("modal-open");
+        } 
+        checkoutModal.click(function(e) {
+            if(!$(this).hasClass('active')) {
+                $("body").removeClass('modal-open');
+            }
+        })
     }
 }
