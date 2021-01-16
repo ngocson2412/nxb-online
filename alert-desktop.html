@@ -50,7 +50,7 @@
             <div class="header__info d-flex align-items-center">
               <div class="header__button d-flex align-items-center account"><a href="./login-mobie.html">
                   <div class="button__notification">!</div><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.25C8.26942 1.25 6.57769 1.76318 5.13876 2.72464C3.69983 3.6861 2.57832 5.05267 1.91606 6.65152C1.25379 8.25037 1.08051 10.0097 1.41813 11.707C1.75575 13.4044 2.58911 14.9635 3.81282 16.1872C5.03653 17.4109 6.59563 18.2442 8.29296 18.5819C9.9903 18.9195 11.7496 18.7462 13.3485 18.0839C14.9473 17.4217 16.3139 16.3002 17.2754 14.8612C18.2368 13.4223 18.75 11.7306 18.75 10C18.75 7.67936 17.8281 5.45376 16.1872 3.81282C14.5462 2.17187 12.3206 1.25 10 1.25ZM15 15.5744V15.1944C15.0174 14.3421 14.6998 13.5171 14.1155 12.8964C13.5312 12.2758 12.7267 11.909 11.875 11.875H8.125C7.27398 11.9092 6.47038 12.2761 5.88712 12.8968C5.30386 13.5174 4.98755 14.3422 5.00625 15.1937C5.00625 15.2006 5 15.2075 5 15.2144V15.58C3.8662 14.5679 3.06647 13.2354 2.70667 11.7588C2.34687 10.2822 2.44398 8.73112 2.98513 7.31092C3.52628 5.89072 4.48595 4.66833 5.73714 3.80557C6.98832 2.94281 8.47201 2.48034 9.99182 2.47939C11.5116 2.47844 12.9959 2.93905 14.2482 3.80025C15.5004 4.66145 16.4616 5.88263 17.0045 7.30216C17.5475 8.72168 17.6465 10.2726 17.2886 11.7497C16.9306 13.2267 16.1325 14.5603 15 15.5737V15.5744Z" fill="#D4B26B"/><path d="M10 4.375C9.38193 4.375 8.77775 4.55828 8.26384 4.90166C7.74994 5.24504 7.3494 5.7331 7.11288 6.30411C6.87635 6.87513 6.81447 7.50347 6.93505 8.10966C7.05563 8.71585 7.35325 9.27267 7.79029 9.70971C8.22733 10.1467 8.78415 10.4444 9.39034 10.565C9.99654 10.6855 10.6249 10.6236 11.1959 10.3871C11.7669 10.1506 12.255 9.75006 12.5983 9.23616C12.9417 8.72225 13.125 8.11807 13.125 7.5C13.125 6.6712 12.7958 5.87634 12.2097 5.29029C11.6237 4.70424 10.8288 4.375 10 4.375Z" fill="#D4B26B"/></svg></a></div>
-              <div class="header__button d-flex align-items-center cart"><a href="./cart-mobie.html">
+              <div class="header__button d-flex align-items-center cart"><a href="./cart-mobile.html">
                   <div class="button__notification">1</div><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.72936 10.4938C3.72936 10.8802 4.02351 11.1934 4.38636 11.1934H15.5554V12.5926H4.38636C3.2978 12.5926 2.41535 11.6529 2.41535 10.4938V1.39918H0.444336V0H3.07236C3.43521 0 3.72936 0.313216 3.72936 0.699588V2.79835H14.2414C14.4438 2.79836 14.6349 2.89767 14.7594 3.06755C14.8839 3.23743 14.9279 3.45892 14.8787 3.66794L13.5647 9.26465C13.4915 9.57592 13.2288 9.79423 12.9274 9.79424H3.72936V10.4938ZM4.53693 17C5.40627 17 6.111 16.2953 6.111 15.4259C6.111 14.5566 5.40627 13.8519 4.53693 13.8519C3.66759 13.8519 2.96285 14.5566 2.96285 15.4259C2.96285 16.2953 3.66759 17 4.53693 17ZM13.9814 17C14.8507 17 15.5554 16.2953 15.5554 15.4259C15.5554 14.5566 14.8507 13.8519 13.9814 13.8519C13.112 13.8519 12.4073 14.5566 12.4073 15.4259C12.4073 16.2953 13.112 17 13.9814 17Z" fill="white"/></svg></a></div>
               <div class="header__button d-flex align-items-center menu"><i class="fas fa-bars"></i></div>
             </div>
@@ -875,54 +875,85 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="alert-expired"><img src="./assets/images/alert/alert-1.svg" alt="">
-            <div class="alert-expired__label">Hết đọc thử</div>
-            <div class="alert-expired__text">Bạn có mua sách hoặc thuê sách để tiếp tục đọc</div>
-            <div class="alert-expired__btn"><a class="alert-expired__btn-brown" href="">Thuê sách</a><a class="alert-expired__btn-blue" href="">Mua sách</a></div>
+          <div class="overlay-modal-alert"></div>
+          <div class="alert-modal-content">
+            <div class="alert-modal alert-expired"><img src="./assets/images/alert/alert-1.svg" alt="">
+              <div class="alert-expired__label">Hết đọc thử</div>
+              <div class="alert-expired__text">Bạn có mua sách hoặc thuê sách để tiếp tục đọc</div>
+              <div class="alert-expired__btn"><a class="alert-expired__btn-brown" href="">Thuê sách</a><a class="alert-expired__btn-blue" href="">Mua sách</a></div>
+            </div>
           </div>
-          <div class="alert-successful"><img src="./assets/images/alert/alert-2.svg" alt="">
-            <div class="alert-successful__label">Đặt mua sách thành công!</div>
-            <div class="alert-successful__text">Cám ơn bạn đã đặt hàng</div>
-            <div class="alert-successful__btn"><a class="alert-successful__btn-green" href="">Ok</a></div>
+          <div class="alert-modal-content">
+            <div class="alert-modal alert-successful"><img src="./assets/images/alert/alert-2.svg" alt="">
+              <div class="alert-successful__label">Đặt mua sách thành công!</div>
+              <div class="alert-successful__text">Cám ơn bạn đã đặt hàng</div>
+              <div class="alert-successful__btn"><a class="alert-successful__btn-green close-modal" href="">Ok</a></div>
+            </div>
           </div>
-          <div class="alert-confirm"><img src="./assets/images/alert/alert-3.svg" alt="">
-            <div class="alert-confirm__label">Xác nhận thanh toán</div>
-            <div class="alert-confirm__text">Bạn có chắc chắn muốn thanh toán qua ví</div>
-            <div class="alert-confirm__btn"><a class="alert-confirm__btn-white" href="">Huỷ</a><a class="alert-confirm__btn-blue" href="">Xác nhận</a></div>
+          <div class="alert-modal-content">
+            <div class="alert-modal alert-confirm"><img src="./assets/images/alert/alert-3.svg" alt="">
+              <div class="alert-confirm__label">Xác nhận thanh toán</div>
+              <div class="alert-confirm__text">Bạn có chắc chắn muốn thanh toán qua ví</div>
+              <div class="alert-confirm__btn"><a class="alert-confirm__btn-white close-modal" href="">Huỷ</a><a class="alert-confirm__btn-blue close-modal" href="">Xác nhận</a></div>
+            </div>
           </div>
-          <div class="alert-delete"><img src="./assets/images/alert/alert-1.svg" alt="">
-            <div class="alert-delete__label">Xoá sản phẩm đã chọn</div>
-            <div class="alert-delete__text">Xóa sản phẩm</div>
-            <div class="alert-delete__btn"><a class="alert-delete__btn-white" href="">Huỷ</a><a class="alert-delete__btn-yellow" href="">Xoá</a></div>
+          <div class="alert-modal-content"> 
+            <div class="alert-modal alert-delete"><img src="./assets/images/alert/alert-1.svg" alt="">
+              <div class="alert-delete__label">Xoá sản phẩm đã chọn</div>
+              <div class="alert-delete__text">Xóa sản phẩm</div>
+              <div class="alert-delete__btn"><a class="alert-delete__btn-white close-modal" href="">Huỷ</a><a class="alert-delete__btn-yellow close-modal" href="">Xoá</a></div>
+            </div>
           </div>
-          <div class="alert-info"><img src="./assets/images/alert/alert-4.svg" alt="">
-            <div class="alert-info__label">Thông tin</div>
-            <div class="alert-info__text">Thông tin info</div>
-            <div class="alert-info__btn"><a class="alert-info__btn-blue" href="">Ok</a></div>
+          <div class="alert-modal-content">
+            <div class="alert-modal alert-info"><img src="./assets/images/alert/alert-4.svg" alt="">
+              <div class="alert-info__label">Thông tin</div>
+              <div class="alert-info__text">Thông tin info</div>
+              <div class="alert-info__btn"><a class="alert-info__btn-blue close-modal" href="">Ok</a></div>
+            </div>
           </div>
-          <div class="alert-noti">
-            <div class="alert-noti__label">Tiêu đề thông báo</div>
-            <div class="alert-noti__text">Nội dung thông báo nhập ở đâyNội dung thông báo nhập ở đâyNội dung thông báo nhập ở đâyNội dung thông báo nhập ở đây</div>
-            <div class="alert-noti__btn"><a class="alert-noti__btn-blue" href="">Ok</a></div>
+          <div class="alert-modal-content">
+            <div class="alert-modal alert-noti">
+              <div class="alert-noti__label">Tiêu đề thông báo</div>
+              <div class="alert-noti__text">Nội dung thông báo nhập ở đâyNội dung thông báo nhập ở đâyNội dung thông báo nhập ở đâyNội dung thông báo nhập ở đây</div>
+              <div class="alert-noti__btn"><a class="alert-noti__btn-blue close-modal" href="">Ok</a></div>
+            </div>
           </div>
         </div>
-        <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-confirm">click show alert 1</button>
+        <div class="toast-message">
+          <div class="toast-mess__wrap"><span class="toast-mess toast-mess__green"><img src="./assets/images/toast-message/toast-1.svg" alt=""><span class="toast-mess__content">Thành công, bạn hãy kiểm tra email và nhấn xác nhận nhé</span></span></div>
+          <div class="toast-mess__wrap"><span class="toast-mess toast-mess__red"><img src="./assets/images/toast-message/toast-2.svg" alt=""><span class="toast-mess__content">Lạ ghê, không có tài khoản nào email như bạn nhập. Bạn thử lại nhé!</span></span></div>
+          <div class="toast-mess__wrap"><span class="toast-mess toast-mess__yellow"><img src="./assets/images/toast-message/toast-3.svg" alt=""><span class="toast-mess__content">Lưu ý đây là toast messenger warning nha các đồng chí!</span></span></div>
+          <div class="toast-mess__wrap"><span class="toast-mess toast-mess__blue"><img src="./assets/images/toast-message/toast-4.svg" alt=""><span class="toast-mess__content">Thông báo là không có cái thông báo nào cả</span></span></div>
         </div>
         <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-delete">click show alert 2</button>
+          <button class="button btn-alert" data-class=".alert-confirm">click show alert 1</button>
         </div>
         <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-expired">click show alert 3</button>
+          <button class="button btn-alert" data-class=".alert-delete">click show alert 2</button>
         </div>
         <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-info">click show alert 4</button>
+          <button class="button btn-alert" data-class=".alert-expired">click show alert 3</button>
         </div>
         <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-noti">click show alert 5</button>
+          <button class="button btn-alert" data-class=".alert-info">click show alert 4</button>
         </div>
         <div class="btn-wrap">
-          <button class="btn-alert" data-id=".alert-successful">click show alert 6</button>
+          <button class="button btn-alert" data-class=".alert-noti">click show alert 5</button>
+        </div>
+        <div class="btn-wrap">
+          <button class="button btn-alert" data-class=".alert-successful">click show alert 6</button>
+        </div>
+        <div class="btn-wrap">
+          <button class="button btn-toast-mess" data-class=".toast-mess__green">click show alert toast message 1</button>
+        </div>
+        <div class="btn-wrap">
+          <button class="button btn-toast-mess" data-class=".toast-mess__red">click show alert toast message 2</button>
+        </div>
+        <div class="btn-wrap">
+          <button class="button btn-toast-mess" data-class=".toast-mess__yellow">click show alert toast message 3</button>
+        </div>
+        <div class="btn-wrap">
+          <button class="button btn-toast-mess" data-class=".toast-mess__blue">click show alert toast message 4</button>
         </div>
       </div>
       <section class="footer"> 
