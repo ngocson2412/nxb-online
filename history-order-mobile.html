@@ -873,183 +873,96 @@
               <i class="fas fa-bars"></i>Xem tất cả danh mục</a></li>
         </ul>
       </div>
-      <div class="history-order-mb"> 
+      <div class="my-account purchase-history-mobile">
         <div class="container">
-          <div class="row history-order-mb-content"> 
-            <div class="history-order-mb__sidebar w-100">
-                            <div class="sidebar-mb">
-                              <div class="sidebar-mb__line"></div>
-                              <div class="sidebar-mb__tab">
-                                <p>Lịch sử giao dịch</p>
-                              </div>
-                            </div>
+          <div class="row"> 
+            <div class="col-lg-12 col-md-12 pd-0">
+              <div class="content content-purchase">
+                <div class="purchase-history table-history">
+                                    <div class="sidebar-mb">
+                                      <div class="sidebar-mb__line"></div>
+                                      <div class="sidebar-mb__tab">
+                                        <p>Lịch sử mua hàng</p>
+                                      </div>
+                                    </div>
+                  <div class="purchase-history__table table-responsive-xl">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">STT</th>
+                          <th scope="col">Mã đơn</th>
+                          <th scope="col">Ngày đặt</th>
+                          <th scope="col">Số tiền</th>
+                          <th scope="col">Trạng thái</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr onclick="window.location='./detail-order-mobile.html'">
+                          <th scope="row">1</th>
+                          <td>#1938</td>
+                          <td>03/03/12 22:43</td>
+                          <td>115.000 đ</td>
+                          <td>
+                            <button class="pending">Chờ duyệt</button>
+                          </td>
+                        </tr>
+                        <tr onclick="window.location='./detail-order-mobile.html'">
+                          <th scope="row">2</th>
+                          <td>#1938</td>
+                          <td>03/03/12 22:43</td>
+                          <td>115.000 đ</td>
+                          <td> 
+                            <button class="approved">Đã duyệt</button>
+                          </td>
+                        </tr>
+                        <tr onclick="window.location='./detail-order-mobile.html'">
+                          <th scope="row">3</th>
+                          <td>#1938</td>
+                          <td>03/03/12 22:43</td>
+                          <td>115.000 đ</td>
+                          <td> 
+                            <button class="canceled">Đã huỷ</button>
+                          </td>
+                        </tr>
+                        <tr onclick="window.location='./detail-order-mobile.html'">
+                          <th scope="row">4</th>
+                          <td>#1938</td>
+                          <td>03/03/12 22:43</td>
+                          <td>115.000 đ</td>
+                          <td> 
+                            <button class="pending">Chờ duyệt</button>
+                          </td>
+                        </tr>
+                        <tr onclick="window.location='./detail-order-mobile.html'">
+                          <th scope="row">5</th>
+                          <td>#1938</td>
+                          <td>03/03/12 22:43</td>
+                          <td>115.000 đ</td>
+                          <td>
+                            <button class="finished">Thành công</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="history__pagination-wrapper"> 
+                    <div class="component__pagination-mb">
+                      <div class="pagination-mb">
+                        <ul class="pagination-mb__list">
+                          <li class="pagination-mb__list-btn"><a class="first__page-mb" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M23.0125 20.7375L17.275 15L23.0125 9.2625L21.25 7.5L13.75 15L21.25 22.5L23.0125 20.7375ZM7.5 7.5H10V22.5H7.5V7.5Z" fill="#BDBDBD"/></svg></a></li>
+                          <li class="pagination-mb__list-btn"><a class="prev" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M19.2687 9.26875L17.5 7.5L10 15L17.5 22.5L19.2687 20.7312L13.5375 15L19.2687 9.26875Z" fill="#BDBDBD"/></svg></a></li>
+                          <li class="active"><a href="#">123</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">23</a></li>
+                          <li class="pagination-mb__list-btn"><a class="next" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M12.5 7.5L10.7312 9.26875L16.4625 15L10.7312 20.7312L12.5 22.5L20 15L12.5 7.5Z" fill="#D4B26B"/></svg></a></li>
+                          <li class="pagination-mb__list-btn"><a class="last__page" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M6.98755 9.2625L12.725 15L6.98755 20.7375L8.75005 22.5L16.25 15L8.75005 7.5L6.98755 9.2625ZM20 7.5H22.5V22.5H20V7.5Z" fill="#D4B26B"/></svg></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="history-order-mb__table table-responsive-xl table-history">
-              <table class="table">
-                <thead>
-                  <tr class="bg-thead"> 
-                    <th class="pl-16px table-stt" scope="col">STT</th>
-                    <th class="table-magiaodich" scope="col">Mã giao dịch </th>
-                    <th class="table-infogiaodich" scope="col">Thông tin giao dịch </th>
-                    <th class="table-status" scope="col">Trạng thái </th>
-                    <th class="table-mainwallet" scope="col">Ví chính </th>
-                    <th class="table-secondwallet" scope="col">Ví khuyến mãi </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="pl-16px" scope="row">1</td>
-                    <td>#1938</td>
-                    <td class="py-10px"> 
-                      <div class="info-via d-flex info-via-mb">  
-                        <div class="info-via__head">Qua: </div>
-                        <div class="info-via__content">COD </div>
-                      </div>
-                      <div class="info-type d-flex info-via-mb"> 
-                        <div class="info-type__head">Loại gd:</div>
-                        <div class="info-type__content">Mua Ebook;sách giấy </div>
-                      </div>
-                      <div class="info-value d-flex info-via-mb"> 
-                        <div class="info-value__head">Giá trị:</div>
-                        <div class="info-value__content">-115.000 đ </div>
-                      </div>
-                      <div class="info-time d-flex info-via-mb"> 
-                        <div class="info-time__head">Thời gian:</div>
-                        <div class="info-time__content">03/03/12 22:43  </div>
-                      </div>
-                    </td>
-                    <td> 
-                      <div class="status__fail status">Thất bại </div>
-                    </td>
-                    <td>-100.000 đ</td>
-                    <td>-100.000 đ</td>
-                  </tr>
-                  <tr class="bg-tbody">
-                    <td class="pl-16px" scope="row">2</td>
-                    <td>#1938</td>
-                    <td class="py-10px"> 
-                      <div class="info-via d-flex info-via-mb">  
-                        <div class="info-via__head">Qua: </div>
-                        <div class="info-via__content">Chuyển khoản </div>
-                      </div>
-                      <div class="info-type d-flex info-via-mb"> 
-                        <div class="info-type__head">Loại gd:</div>
-                        <div class="info-type__content">Hoa hồng </div>
-                      </div>
-                      <div class="info-value d-flex info-via-mb"> 
-                        <div class="info-value__head">Giá trị:</div>
-                        <div class="info-value__content">-115.000 đ </div>
-                      </div>
-                      <div class="info-time d-flex info-via-mb"> 
-                        <div class="info-time__head">Thời gian:</div>
-                        <div class="info-time__content">03/03/12 22:43</div>
-                      </div>
-                    </td>
-                    <td> 
-                      <div class="status__done status">Thành công </div>
-                    </td>
-                    <td>-100.000 đ</td>
-                    <td>115.000 đ</td>
-                  </tr>
-                  <tr>
-                    <td class="pl-16px" scope="row">3</td>
-                    <td>#1938</td>
-                    <td class="py-10px"> 
-                      <div class="info-via d-flex info-via-mb">  
-                        <div class="info-via__head">Qua: </div>
-                        <div class="info-via__content">COD </div>
-                      </div>
-                      <div class="info-type d-flex info-via-mb"> 
-                        <div class="info-type__head">Loại gd:</div>
-                        <div class="info-type__content">Mua sách giấy </div>
-                      </div>
-                      <div class="info-value d-flex info-via-mb"> 
-                        <div class="info-value__head">Giá trị:</div>
-                        <div class="info-value__content">-115.000 đ </div>
-                      </div>
-                      <div class="info-time d-flex info-via-mb"> 
-                        <div class="info-time__head">Thời gian:</div>
-                        <div class="info-time__content">03/03/12 22:43</div>
-                      </div>
-                    </td>
-                    <td> 
-                      <div class="status__cancel status">Đã huỷ</div>
-                    </td>
-                    <td>-100.000 đ</td>
-                    <td>-100.000 đ</td>
-                  </tr>
-                  <tr class="bg-tbody">
-                    <td class="pl-16px" scope="row">4</td>
-                    <td>#1938</td>
-                    <td class="py-10px"> 
-                      <div class="info-via d-flex info-via-mb">  
-                        <div class="info-via__head">Qua: </div>
-                        <div class="info-via__content">VN pay </div>
-                      </div>
-                      <div class="info-type d-flex info-via-mb"> 
-                        <div class="info-type__head">Loại gd:</div>
-                        <div class="info-type__content">Mua Ebook </div>
-                      </div>
-                      <div class="info-value d-flex info-via-mb"> 
-                        <div class="info-value__head">Giá trị:</div>
-                        <div class="info-value__content">-115.000 đ </div>
-                      </div>
-                      <div class="info-time d-flex info-via-mb"> 
-                        <div class="info-time__head">Thời gian:</div>
-                        <div class="info-time__content">03/03/12 22:43</div>
-                      </div>
-                    </td>
-                    <td> 
-                      <div class="status__done status">Thành công </div>
-                    </td>
-                    <td>-100.000 đ</td>
-                    <td>-100.000 đ</td>
-                  </tr>
-                  <tr>
-                    <td class="pl-16px" scope="row">5</td>
-                    <td>#1938</td>
-                    <td class="py-10px"> 
-                      <div class="info-via d-flex info-via-mb">  
-                        <div class="info-via__head">Qua: </div>
-                        <div class="info-via__content">COD </div>
-                      </div>
-                      <div class="info-type d-flex info-via-mb"> 
-                        <div class="info-type__head">Loại gd:</div>
-                        <div class="info-type__content">Mua sách giấy</div>
-                      </div>
-                      <div class="info-value d-flex info-via-mb"> 
-                        <div class="info-value__head">Giá trị:</div>
-                        <div class="info-value__content">-115.000 đ </div>
-                      </div>
-                      <div class="info-time d-flex info-via-mb"> 
-                        <div class="info-time__head">Thời gian:</div>
-                        <div class="info-time__content">03/03/12 22:43</div>
-                      </div>
-                    </td>
-                    <td> 
-                      <div class="status__done status">Thành công</div>
-                    </td>
-                    <td>-100.000 đ</td>
-                    <td>-100.000 đ</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="history__pagination-wrapper">
-        <div class="component__pagination-mb">
-          <div class="pagination-mb">
-            <ul class="pagination-mb__list">
-              <li class="pagination-mb__list-btn"><a class="first__page-mb" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M23.0125 20.7375L17.275 15L23.0125 9.2625L21.25 7.5L13.75 15L21.25 22.5L23.0125 20.7375ZM7.5 7.5H10V22.5H7.5V7.5Z" fill="#BDBDBD"/></svg></a></li>
-              <li class="pagination-mb__list-btn"><a class="prev" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M19.2687 9.26875L17.5 7.5L10 15L17.5 22.5L19.2687 20.7312L13.5375 15L19.2687 9.26875Z" fill="#BDBDBD"/></svg></a></li>
-              <li class="active"><a href="#">123</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">23</a></li>
-              <li class="pagination-mb__list-btn"><a class="next" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M12.5 7.5L10.7312 9.26875L16.4625 15L10.7312 20.7312L12.5 22.5L20 15L12.5 7.5Z" fill="#D4B26B"/></svg></a></li>
-              <li class="pagination-mb__list-btn"><a class="last__page" href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 3C0 1.34315 1.34315 0 3 0H27C28.6569 0 30 1.34315 30 3V27C30 28.6569 28.6569 30 27 30H3C1.34315 30 0 28.6569 0 27V3Z"/><path d="M6.98755 9.2625L12.725 15L6.98755 20.7375L8.75005 22.5L16.25 15L8.75005 7.5L6.98755 9.2625ZM20 7.5H22.5V22.5H20V7.5Z" fill="#D4B26B"/></svg></a></li>
-            </ul>
           </div>
         </div>
       </div>
