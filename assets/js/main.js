@@ -607,6 +607,7 @@ const homeSilderMobile = {
                 }
             },
             loop: true,
+            lazyLoad: true,
             rewind: false,
             autoplay: true,
             autoplayTimeout: 6000,
