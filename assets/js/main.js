@@ -35,7 +35,6 @@ $(document).ready(function() {
     qualityControl.init();
     optionsDetail.init();
     checkout.init()
-    modalAuthor.init()
     typicalSilder.init();
     cartmobile.init();
     owl.init();
@@ -46,7 +45,6 @@ $(document).ready(function() {
     checkoutModal.init()
     megaMenuOverlay.init();
     readMorePayment.init();
-    modalOrderDetail.init();
     sweetAlert.init();
     fixScrollBarCheckout.init();
 });
@@ -251,11 +249,13 @@ const modalAuthor = {
         btnShow.click(function() {
             modalOverlay.addClass('list__overlay--show');
             listContent.addClass('list__content--show');
+            $("body").addClass("modal-open");
         })
         btnClose.add(modalOverlay).on('click', function(e) {
             modalOverlay.removeClass('list__overlay--show');
             listContent.removeClass('list__content--show');
             e.stopPropagation();
+            $("body").removeClass("modal-open");
         });
     }
 }
@@ -719,33 +719,7 @@ const megaMenuOverlay = {
         })
      }
  }
-/* ============================= 21, modal orderDetail  ============================= */
-const modalOrderDetail = {
-    init: function() {
-        this.orderDetail();
-    },
-    orderDetail:function() {
-        let idOrder;
-       $('.see').click(function(){
-           idOrder=$(this).attr('id-orderDetail');
-           $('.modal-orderDetail-ovelay').addClass('active');
-           if(idOrder){
-            $(idOrder).addClass('active')
-           }
-           $('html').css({"overflow": "hidden"})
-       })
-       $('.orderDetail-content__close').click(function(){
-            $('.modal-orderDetail-ovelay').removeClass('active');
-            $(idOrder).removeClass('active');
-           $('html').css({"overflow": "unset"})
-       })
-       $('.modal-orderDetail-ovelay').click(function(){
-            $(this).removeClass('active');
-            $(idOrder).removeClass('active');
-            $('html').css({"overflow": "unset"})
-        })
-    }
-}
+
 /* ============================= 23, sweet Alert  ============================= */
 const sweetAlert = {
     init:function() {
