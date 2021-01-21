@@ -886,177 +886,165 @@
             </div>
       <div class="detail-order-desktop">
         <div class="container">
-          <div class="modal-orderDetail">
-            <div class="row orderDetail-content">
-              <div class="orderDetail-content__top">
-                <div class="left">
-                  <h3>Trạng thái: </h3>
-                  <button class="pending">Đang chờ duyệt</button>
-                </div>
-                <div class="right"><a class="orderDetail-btn delete" href=""><img src="assets/images/ic_delete_forever_48px.svg" alt="">Huỷ đơn hàng</a><a class="hotline" href=""><img src="assets/images/bx_bxs-phone-call.svg" alt="">
-                    <div class="text"><span>Hotline hỗ trợ:</span><span class="phone">(0243)8218785</span></div></a></div>
+          <div class="detailOrder-content">
+            <div class="detailOrder-content__top d-flex justify-content-between align-items-center">
+              <div class="left d-flex align-items-center">
+                <h3>Trạng thái: </h3>
+                <button class="pending">Đang chờ duyệt</button>
               </div>
-              <div class="orderDetail-content__bot">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <div class="purchase-history__table table-responsive-xl">
-                      <table class="table">
-                        <thead>
-                          <tr class="border-none"> 
-                            <th class="border-none" scope="col">STT</th>
-                            <th class="border-none" scope="col">Sản phẩm</th>
-                            <th class="border-none" scope="col">Loại</th>
-                            <th class="border-none" scope="col">Số lượng</th>
-                            <th class="border-none text-right" scope="col">Thành tiền</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td> 
-                              <div class="sort-desc">
-                                <h4>Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
-                              </div>
-                            </td>
-                            <td class="text-center"> <span class="type">Ebook</span></td>
-                            <td>1</td>
-                            <td class="border-none text-right">115.000 đ </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td> 
-                              <div class="sort-desc">
-                                <h4>Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
-                              </div>
-                            </td>
-                            <td class="text-center"><span class="type">Sách</span></td>
-                            <td>1</td>
-                            <td class="border-none text-right">115.000 đ </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td> 
-                              <div class="sort-desc">
-                                <h4>Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
-                              </div>
-                            </td>
-                            <td class="text-center"><span class="type">Ebook</span></td>
-                            <td>1</td>
-                            <td class="border-none text-right">115.000 đ </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td> 
-                              <div class="sort-desc">
-                                <h4>Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
-                              </div>
-                            </td>
-                            <td class="text-center"><span class="type">Ebook</span></td>
-                            <td>1</td>
-                            <td class="border-none text-right">115.000 đ </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td> 
-                              <div class="sort-desc">
-                                <h4>Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
-                              </div>
-                            </td>
-                            <td class="text-center"><span class="type">Ebook</span></td>
-                            <td>1</td>
-                            <td class="border-none text-right">115.000 đ </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <ul class="info-money">
-                      <li>
-                        <div class="row">
-                          <div class="col-6">
-                            <h4>Tổng cộng</h4>
-                          </div>
-                          <div class="col-6"><span>820.000 đ</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-6">
-                            <h4>Khuyến mãi</h4>
-                          </div>
-                          <div class="col-6"><span>-25.000 đ</span></div>
-                        </div>
-                      </li>
-                      <li class="border-solid">
-                        <div class="row">
-                          <div class="col-6">
-                            <h4>Phí ship</h4>
-                          </div>
-                          <div class="col-6"><span>20.000 đ</span></div>
-                        </div>
-                      </li>
-                      <li class="border-none">
-                        <div class="row">
-                          <div class="col-6">
-                            <h4>Thành tiền</h4>
-                          </div>
-                          <div class="col-6"><span>815.000 đ</span></div>
-                        </div>
-                      </li>
-                    </ul>
+              <div class="right d-flex align-items-center"><a class="delete d-flex align-items-center" href=""><img src="assets/images/ic_delete_forever_48px.svg" alt="">Huỷ đơn hàng</a><a class="hotline d-flex align-items-center" href=""><img src="assets/images/bx_bxs-phone-call.svg" alt="">
+                  <div class="text d-flex flex-column"><span>Hotline hỗ trợ:</span><span class="phone">(0243)8218785</span></div></a></div>
+            </div>
+            <div class="detailOrder-content__bot">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="bot-table table-responsive-xl">
+                    <table class="table">
+                      <thead>
+                        <tr> 
+                          <th scope="col">STT</th>
+                          <th scope="col">Sản phẩm</th>
+                          <th scope="col">Loại</th>
+                          <th scope="col">Số lượng</th>
+                          <th class="text-right" scope="col">Thành tiền</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td> 
+                            <h4 class="sort-desc">Hệ thống giao thông thông minhn trong các đô thị thông minh</h4>
+                          </td>
+                          <td class="text-center"><span class="blue-outline">Ebook</span></td>
+                          <td>1</td>
+                          <td class="text-right">115.000 đ </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td> 
+                            <div class="sort-desc">Hệ thống giao thông thông minhn trong các đô thị thông minh</div>
+                          </td>
+                          <td class="text-center"><span class="blue-outline">Sách</span></td>
+                          <td>1</td>
+                          <td class="text-right">115.000 đ </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td> 
+                            <div class="sort-desc">Hệ thống giao thông thông minhn trong các đô thị thông minh</div>
+                          </td>
+                          <td class="text-center"><span class="blue-outline">Ebook</span></td>
+                          <td>1</td>
+                          <td class="text-right">115.000 đ </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td> 
+                            <div class="sort-desc">Hệ thống giao thông thông minhn trong các đô thị thông minh</div>
+                          </td>
+                          <td class="text-center"><span class="blue-outline">Ebook</span></td>
+                          <td>1</td>
+                          <td class="text-right">115.000 đ </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td> 
+                            <div class="sort-desc">Hệ thống giao thông thông minhn trong các đô thị thông minh</div>
+                          </td>
+                          <td class="text-center"><span class="blue-outline">Ebook</span></td>
+                          <td>1</td>
+                          <td class="text-right">115.000 đ </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="col-lg-5">
-                    <div class="right-info">
-                      <h3>Thông tin đơn hàng:</h3>
-                      <table class="table">
-                        <tbody>
-                          <tr>
-                            <th scope="row">Mã đơn:</th>
-                            <td>#029374028</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Ngày:</th>
-                            <td>03/03/12 22:43</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Hình thức:</th>
-                            <td>Chuyển khoản</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Trạng thái:</th>
-                            <td>Đã thanh toán</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <h3>Giao đến:<a class="btn-edit" href="./edit-order-desktop.html">sửa</a></h3>
-                      <table class="table">
-                        <tbody>
-                          <tr>
-                            <th scope="row">Họ tên:</th>
-                            <td>Phùng Thị Hồng Thắm</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">SĐT:</th>
-                            <td>0987654321</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Địa chỉ:</th>
-                            <td>P A2808, Hồ Gươm Plaza, 110 Trần Phú, Mỗ Lao, Hà Đông</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Giao qua:</th>
-                            <td class="d-flex align-items-center"><span>Viettel Post</span><a class="search" href=""><img src="assets/images/search.svg" alt="">Tra đơn</a></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Mã vận đơn:</th>
-                            <td>#9290308</td>
-                          </tr>
-                          <tr class="border-none">
-                            <th scope="row">Trạng thái:</th>
-                            <td>Đã giao hàng</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <ul class="info-money">
+                    <li>
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Tổng cộng</h4>
+                        </div>
+                        <div class="col-6 text-right"><span>820.000 đ</span></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Khuyến mãi</h4>
+                        </div>
+                        <div class="col-6 text-right"><span>-25.000 đ</span></div>
+                      </div>
+                    </li>
+                    <li class="border-solid">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Phí ship</h4>
+                        </div>
+                        <div class="col-6 text-right"><span>20.000 đ</span></div>
+                      </div>
+                    </li>
+                    <li class="into-money">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Thành tiền</h4>
+                        </div>
+                        <div class="col-6 text-right"><span>815.000 đ</span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="right-info">
+                    <h3 class="justify-content-between">Thông tin đơn hàng:</h3>
+                    <table class="table">
+                      <tbody class="info">
+                        <tr>
+                          <th scope="row">Mã đơn:</th>
+                          <td>#029374028</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Ngày:</th>
+                          <td>03/03/12 22:43</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Hình thức:</th>
+                          <td>Chuyển khoản</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Trạng thái:</th>
+                          <td>Đã thanh toán</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h3 class="d-flex justify-content-between">Giao đến:<a class="blue-outline" href="./edit-order-desktop.html">Sửa</a></h3>
+                    <table class="table">
+                      <tbody class="adress">
+                        <tr>
+                          <th scope="row">Họ tên:</th>
+                          <td>Phùng Thị Hồng Thắm</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">SĐT:</th>
+                          <td>0987654321</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Địa chỉ:</th>
+                          <td>P A2808, Hồ Gươm Plaza, 110 Trần Phú, Mỗ Lao, Hà Đông</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Giao qua:</th>
+                          <td class="d-flex align-items-center flex-wrap info-pay"><span class="namepay">Viettel Post</span><a class="search d-flex align-items-center" href=""><img src="assets/images/search.svg" alt="">Tra đơn</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Mã vận đơn:</th>
+                          <td>#9290308</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Trạng thái:</th>
+                          <td>Đã giao hàng</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

@@ -390,11 +390,23 @@ const typicalSilder = {
                     items: 2
                 },
                 600: {
+                    items: 2
+                },
+                768: {
                     items: 3
+                },
+                769: {
+                    items: 4
                 },
                 1000: {
                     items: 6
-                }
+                },
+                1025: {
+                    items: 5
+                },
+                1200: {
+                    items: 6
+                },
             },
             autoplay: true,
             autoplayTimeout: 6000,
