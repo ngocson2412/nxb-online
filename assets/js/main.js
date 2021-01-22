@@ -380,6 +380,7 @@ const checkout = {
 const typicalSilder = {
     init: function() {
         this.typicalSilder();
+        this.typicalBookSliderMb()
     },
     typicalSilder: function() {
         $('.typical__slider').owlCarousel({
@@ -416,7 +417,27 @@ const typicalSilder = {
             dots: true,
             navText: ["<img src='./assets/images/typical-book/prev.svg'>", "<img src='./assets/images/typical-book/next.svg'>"]
         })
-    }
+    },
+    typicalBookSliderMb: function() {
+        $('.typical__book__carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            smartSpeed: 300,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                425: {
+                    items: 3
+                },
+            },
+            nav: false,
+            dots: false,
+        })
+    },
 }
 
 /* ============================= 12, checkout cart-mb ============================= */
