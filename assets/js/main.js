@@ -548,15 +548,15 @@ const select_2 = {
             })
             filterOverlay.click(() => {
                 filterBox.removeClass('active')
-                body.removeClass('modal-open')
+                body.css('overflow','hidden');
             })
             cancleBtn.click(() => {
                 filterBox.removeClass('active')
-                body.removeClass('modal-open')
+                body.css('overflow','auto');
             })
             closeBtn.click(() => {
                 filterBox.removeClass('active')
-                body.removeClass('modal-open')
+                body.css('overflow','auto');
             })
         }
     }
