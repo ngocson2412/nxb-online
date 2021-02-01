@@ -544,11 +544,11 @@ const select_2 = {
         if (filterBtn && filterOverlay && cancleBtn && closeBtn) {
             filterBtn.click(() => {
                 filterBox.addClass('active')
-                body.addClass('modal-open')
+                body.css('overflow','hidden');
             })
             filterOverlay.click(() => {
                 filterBox.removeClass('active')
-                body.css('overflow','hidden');
+                body.css('overflow','auto');
             })
             cancleBtn.click(() => {
                 filterBox.removeClass('active')
