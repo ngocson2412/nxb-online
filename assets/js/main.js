@@ -544,19 +544,19 @@ const select_2 = {
         if (filterBtn && filterOverlay && cancleBtn && closeBtn) {
             filterBtn.click(() => {
                 filterBox.addClass('active')
-                body.css('overflow','hidden');
+                body.addClass('modal-open')
             })
             filterOverlay.click(() => {
                 filterBox.removeClass('active')
-                body.css('overflow','auto');
+                body.removeClass('modal-open')
             })
             cancleBtn.click(() => {
                 filterBox.removeClass('active')
-                body.css('overflow','auto');
+                body.removeClass('modal-open')
             })
             closeBtn.click(() => {
                 filterBox.removeClass('active')
-                body.css('overflow','auto');
+                body.removeClass('modal-open')
             })
         }
     }
@@ -840,10 +840,10 @@ const fixInputControlMobile = {
         const input = $('.filter__menu-box .box-price__form .form-item .input-control');
         const menu = $('.filter__menu-box');
         input.focus(function() {
-            menu.css('overflow','hidden');
+            $(".box__cancle-mobile").hide()
         })
         input.blur(function() {
-            menu.css('overflow','auto');
+            $(".box__cancle-mobile").show()
         })
     }
 }
