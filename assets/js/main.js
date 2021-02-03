@@ -22,6 +22,7 @@
 - 21, Fix Pagination 
 - 23, Sweet Alert
 - 24, FixScrollbarOpenCheckoutModal
+- 25, FiX Input Control Mobile
 */
 /* ============================= 1, init  ============================= */
 $(document).ready(function() {
@@ -48,6 +49,7 @@ $(document).ready(function() {
     sweetAlert.init();
     fixScrollBarCheckout.init();
     viewmore.init();
+    fixInputControlMobile.init();
 });
 
 /* ============================= 2, Scroll ============================= */
@@ -828,4 +830,20 @@ const viewmore = {
             });     
             });
  }
+}
+/* ============================= 26, Fix Input Control Mobile ============================= */
+const fixInputControlMobile = {
+    init:function () {
+        this.fixInputControlMobile();
+    },
+    fixInputControlMobile:function() {
+        const input = $('.filter__menu-box .box-price__form .form-item .input-control');
+        const menu = $('.filter__menu-box');
+        input.focus(function() {
+            $(".box__cancle-mobile").hide()
+        })
+        input.blur(function() {
+            $(".box__cancle-mobile").show()
+        })
+    }
 }
